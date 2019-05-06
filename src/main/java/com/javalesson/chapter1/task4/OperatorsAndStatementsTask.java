@@ -21,7 +21,7 @@ public class OperatorsAndStatementsTask {
     private static int normal = 0;
 
     public static void main(String[] args) {
-        System.out.println("Running main");
+        //System.out.println("Running main");
 
 
         /**
@@ -64,11 +64,7 @@ public class OperatorsAndStatementsTask {
      * Для проверки результатов выполните тесты в классе OperatorsTest нажав правой кнопкой мыши
      * и вызвав Run OperatorsTest.
      */
-    static String checkStrangeness(int num) {
-
-        //мой кусок
-
-        //num = testStrangeNumbers();
+    private static String checkStrangeness(int num) {
 
         if ((num % 2 != 0) || (num % 2 == 0 && num >= 6 && num <= 20)) {
             return "Strange";
@@ -98,20 +94,17 @@ public class OperatorsAndStatementsTask {
      */
     private static void countNumTypes(String[] types) {
 
-        //мой кусок
-
-
-
-        for (int i = 0; i < 6; i++) {
-            switch (checkStrangeness(types)){
-                case "Strange": strange++;
+        for (int i = 0; i < types.length; i++) {
+            switch (types[i]) {
+                case "Strange":
+                    strange++;
                     break;
-                case "Normal": normal++;
+                case "Normal":
+                    normal++;
                     break;
-                default:
+                default:    //возможно надо удалить
                     break;
             }
-            System.out.println(strange + " " + normal);//временная проверка
         }
     }
 
